@@ -25,7 +25,29 @@ let myObj = {
 }
 
 const myFunction = function(){
-    console.log("hello world")
+  //  console.log("hello world")
 }
 
 console.log(typeof myObj)
+
+/*********************************************Memory*********************************************************** */
+//Stack(Stores Primitive) and Heap (stores Non-Primitive)
+//Down below is the proof
+
+let str1 = "Apple"
+let str2 = str1
+
+str2 = "Banana"
+console.log(str1); //change in str2 doesn't affect str1 because a copy of str1 was provided to str2. This proves that it was stored in stack
+console.log(str2);
+
+let myUserOne = {
+    username: "Kinjal",
+    upi: "8234@ybl",
+    email: "jish@gmail.com"
+}
+
+let myUserTwo = myUserOne
+myUserTwo.email = "kin30@gmail.com"
+console.log(myUserOne.email);
+console.log(myUserTwo.email); // Since objects are stored in the heap, the variables are provided the original reference. So, change in either variables results in change in heap and thus, both share the same reference.
