@@ -29,8 +29,35 @@ const obj3 = {7: "G", 8: "H", 9: "I"}
 const obj4 = {...obj1, ...obj2, ...obj3} // this is the use of spread operator to combine all objects into one
 // console.log(obj4);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser)); //Creates arrays of key-value pair
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser)); //Creates arrays of key-value pair
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn')) //this returns a boolean result whether this property of object exists
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')) //this returns a boolean result whether this property of object exists
+
+const course = {
+    coursename : "JS in one shot",
+    courseInstructor: "hitesh",
+    courseDuration: "9 hours"
+}
+
+//object destructuring
+const {courseInstructor : instructor} = course
+// console.log(courseInstructor);
+console.log(instructor);
+
+//Following are JSON API calls example:
+
+//Method 1:
+// {
+//     "name" : "Jish",
+//     "courseName" : "JS in hindi",
+//     "price" : "free"
+// }
+
+//Method 2:
+[
+    {},
+    {},
+    {}
+]
