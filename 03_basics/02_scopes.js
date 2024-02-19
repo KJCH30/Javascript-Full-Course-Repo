@@ -33,3 +33,19 @@ function one (){
 }
 
 one()
+
+// ************************** Interesting *********************************//
+
+console.log(addOne(5)) //this is getting printed because once a function is initialized, it can be called from anywhere
+
+function addOne(num){
+    return num + 1
+}
+
+//addTwo(5) // this cannot be accessed since it is initialized using a variable. So, this part is actually before the variable was initialized
+
+const addTwo = function(num){
+    return num + 2
+}
+
+console.log(addTwo(7))  //Now it gets printed
